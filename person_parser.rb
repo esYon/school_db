@@ -33,7 +33,7 @@ class PersonParser
   def parse_people_objects_from_file
     @peeps = []
     CSV.foreach(@file, :headers => true, :header_converters => :symbol) { |person|
-      @peeps << Student.new(person)
+      @peeps << Person.new(person)
     }
     @peeps
   end
